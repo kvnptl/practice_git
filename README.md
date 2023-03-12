@@ -13,8 +13,6 @@
 - Git branch
 - Git checkout
 - Git merge
-- Git rebase
-- Git stash
 - Git diff
 - Git remote
 - Git clone
@@ -542,22 +540,9 @@ git commit -m "put some changes in the readme file"
 git checkout <branch-name>
 ```
 
-70. Add some changes to the readme file and save them
+70. Check the readme file and you will see that the both branches have different changes
 
-71. Check the status of the repository using the following command:
-
-```bash
-git status
-```
-
-72. Add the readme file to the staging area and commit the changes using the following commands:
-
-```bash
-git add README.md
-git commit -m "put some changes in the readme file"
-```
-
-73. Switch to the main branch using the following command:
+71. Checkout the main branch using the following command:
 
 ```bash
 git checkout main
@@ -589,13 +574,19 @@ git status
     
 ```bash
 <<<<<< HEAD
-put some changes in the readme file
+main branch changes 123 
 =======
-put some changes in the readme file
+new branch changes one 23
 >>>>>> <branch-name>
 ```
 
 - Remove the conflict markers and keep the changes that you want to keep
+- It should look like this (if you kept the changes from the new branch):
+
+```bash
+new branch changes one 23
+```
+
 
 79. Add the readme file to the staging area and commit the changes using the following commands:
 
@@ -610,19 +601,175 @@ git commit -m "put some changes in the readme file"
 git push <remote-name> <branch-name>
 ```
 
+- Don't forget to update the branch name
 
+### Git pull
 
+- Git pull is a combination of git fetch and git merge
+- Suppose that you have a local repository and a remote repository, and you made some changes to the remote repository, so if you want to get the changes from the remote repository to the local repository
 
+81. Use the following command:
 
+```bash
+git pull <remote-name> <branch-name>
+```
 
+- This command will fetch the changes from the remote repository and merge them to the local repository
 
+#### Now we'll see difference between git pull and git fetch
 
+82. Create a new branch using the following command:
 
+```bash
+git checkout -b <branch-name>
+```
 
+83. Add some changes to the readme file and save them
 
+84. Check the status of the repository using the following command:
 
+```bash
+git status
+```
 
+85. Add the readme file to the staging area and commit the changes using the following commands:
 
+```bash
+git add README.md
+git commit -m "put some changes in the readme file"
+```
 
+86. Switch to the main branch using the following command:
 
+```bash
+git checkout main
+```
+
+87. Add some changes to the readme file and save them
+
+88. Check the status of the repository using the following command:
+
+```bash
+git status
+```
+
+89. Add the readme file to the staging area and commit the changes using the following commands:
+
+```bash
+git add README.md
+git commit -m "put some changes in the readme file"
+```
+
+95. Push the changes to the remote repository using the following command:
+
+```bash
+git push <remote-name> <branch-name>
+```
+
+- Don't forget to update the branch name
+
+96. Switch to the new branch using the following command:
+
+```bash
+git checkout <branch-name>
+```
+
+97. Use the following command:
+
+```bash
+git pull <remote-name> <branch-name>
+```
+
+- This command will fetch the changes from the remote repository and merge them to the local repository
+
+98. Check the readme file and you will see that the changes are there 
+
+99. Use the following command:
+
+```bash
+git fetch <remote-name> <branch-name>
+```
+
+- This command will fetch the changes from the remote repository
+
+100. Check the readme file and you will see that the changes are not there
+
+101. Use the following command:
+
+```bash
+git merge <remote-name>/<branch-name>
+```
+
+- This command will merge the changes from the remote repository to the local repository
+
+102. Check the readme file and you will see that the changes are there
+
+## !!! ALWAYS REMEMBER TO 'PULL' BEFORE YOU 'PUSH' !!!
+
+### Git pull request
+
+- A pull request is a way to tell others about changes you've pushed to a branch in a repository on GitHub
+
+103. Fork the repository that you want to contribute to (you can fork it from the GitHub website)
+
+104. Clone the forked repository using the following command:
+
+```bash
+git clone <repository-url>
+```
+
+105. Create a new branch using the following command:
+
+```bash
+git checkout -b <branch-name>
+```
+
+106. Add some changes to some file and save them
+
+107. Check the status of the repository using the following command:
+
+```bash
+git status
+```
+
+108. Add the file to the staging area and commit the changes using the following commands:
+
+```bash
+git add <file-name>
+git commit -m "put some changes in the readme file"
+```
+
+109. Push the changes to the remote repository using the following command:
+
+```bash
+git push <remote-name> <branch-name>
+```
+
+- This command will push the changes to the forked repository, not to the original repository
+
+110. Go to the forked repository on the GitHub website and you will see that you have a new branch
+
+111. Click on the 'Compare & pull request' button
+
+112. Add a title and a description and click on the 'Create pull request' button
+
+113. Check the status of the pull request and you will see that it's waiting for approval
+
+114. Go to the original repository on the GitHub website and you will see that you have a new pull request
+
+115. Click on the 'Merge pull request' button
+
+116. Click on the 'Confirm merge' button
+
+117. Click on the 'Delete branch' button
+
+118. Check the status of the pull request and you will see that it's merged
+
+119. Go to the forked repository on the GitHub website and you will see that the changes are there
+
+### Advance git commands
+
+- Git stash
+- Git rebase
+- Git cherry-pick
 
