@@ -825,9 +825,9 @@ git push <remote-name> <branch-name>
 - Free Code Camp | [Git and GitHub for Beginners - Crash Course](https://youtu.be/RGOj5yH7evk)
 - IBM edx course: [Introduction to git and github](https://www.edx.org/course/introduction-to-git-and-github)
 
-### Small project for practice
+## Small projects for practice
 
-1. Project title: Calculator Application with Git and Version Control
+**1. Project title: Calculator Application with Git and Version Control**
 
 Description: Create a calculator application using Python and use Git and GitHub for version control
 
@@ -858,7 +858,7 @@ Student 3
 - Volume of a sphere, volume of a cylinder, volume of a cone
 - Find pythagorean triplets
 
-2. Project title: Data plotting application with Git and Version Control
+**2. Project title: Data plotting application with Git and Version Control**
 
 Dataset: [Iris dataset](https://archive.ics.uci.edu/ml/datasets/iris)
 
@@ -890,7 +890,7 @@ Student 3
 - Plot the data using a violin plot
 - Find the mean, median, mode, standard deviation, variance, and range of the data
 
-3. Project title: basic image processing application with Git and Version Control
+**3. Project title: basic image processing application with Git and Version Control**
 
 Requirements:
 - Python 3.6 or higher
@@ -939,7 +939,7 @@ Student 3
 - Edge detection
 
 
-4. Project title: validating credit card numbers with Git and Version Control
+**4. Project title: validating credit card numbers with Git and Version Control**
 
 Description: Create a program to validate credit card numbers using Python and use Git and GitHub for version control
 
@@ -959,7 +959,7 @@ NOTE: Get the PDF file
 
 Student 1 & 2: divide the check condition into two parts
 
-5. Project title: Validating email addresses with Git and Version Control
+**5. Project title: Validating email addresses with Git and Version Control**
 
 Description: Create a program to validate email addresses using Python and use Git and GitHub for version control
 
