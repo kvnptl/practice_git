@@ -3,4 +3,4 @@ how are you?
 are you fine?
 I'm fine
 New update!
-This line is for fetch testing
+Now, I know how to do fetch and merge.
