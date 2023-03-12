@@ -17,7 +17,10 @@
 - Git remote
 - Git clone
 - Git fetch
-
+- Fork
+- Pull request
+- Github issues
+- .gitignore file
 
 ### Requirements and commands to install:
 
@@ -31,6 +34,10 @@
 ```bash
 sudo apt install git
 ```
+
+4. From today onwards, use git to manage all your projects
+
+5. Also, put all the foundation course files on your GitHub account
 
 ### Basic git workflow:
 
@@ -770,6 +777,204 @@ git push <remote-name> <branch-name>
 ### Advance git commands
 
 - Git stash
+   - Used for saving the changes that you don't want to commit
 - Git rebase
+    - Used for changing the base commit of a branch
 - Git cherry-pick
+    - Used for picking a commit from a branch and applying it to another branch
+- Git tag
+    - Used for marking a specific commit with a tag
 
+
+### Small Git quiz
+
+1. You and your team are working on a project using Git. One of your team members has made some changes to a file, but they're not sure if they want to keep them or not. What Git command can they use to see the changes they've made and decide whether to keep them?
+
+- Answer: `git diff`
+
+2. You've been working on a project using Git, and you accidentally deleted a file that was important. What command can you use to restore the file to the state it was in before it was deleted?
+
+- Answer: `git checkout -- <file-name>`
+
+3. You've been working on a feature branch in Git, and you're ready to merge your changes back into the main branch. What command should you use to create a new merge commit that incorporates your changes?
+
+- Answer: `git merge <branch-name>`, from the branch you want to merge into (ex. `git merge feature` from the main branch)
+
+4. You've been working on a project using Git, and you've made some changes to a file. You want to commit those changes, but you don't want to commit all the changes you've made. What command can you use to add only the changes you want to commit?
+
+- Answer: `git add <file-name>`
+
+5. You're working on a project using Git, and you want to see a list of all the commits that have been made to the repository. What command can you use to see this list?
+
+- Answer: `git log`
+
+6. Your team is working on a project using Git, and you want to make sure that everyone is using the latest version of the code. What command can you use to update your local repository with the latest changes from the remote repository?
+
+- Answer: `git pull <remote-name> <branch-name>`
+
+7. Your team is working on a project using Git, and you want to create a new branch to work on a new feature. What command can you use to create a new branch?
+
+- Answer: `git checkout -b <branch-name>`
+
+### Some online resources
+
+- Github | [Git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+- Atlassian | [Git cheat sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
+- Udacity course | [Version Control with Git](https://www.udacity.com/course/version-control-with-git--ud123)
+- Atlassian | Coursera course: [Version Control with Git](https://www.coursera.org/learn/version-control-with-git#syllabus)
+- Free Code Camp | [Git and GitHub for Beginners - Crash Course](https://youtu.be/RGOj5yH7evk)
+- IBM edx course: [Introduction to git and github](https://www.edx.org/course/introduction-to-git-and-github)
+
+### Small project for practice
+
+1. Project title: Calculator Application with Git and Version Control
+
+Description: Create a calculator application using Python and use Git and GitHub for version control
+
+No. of students: 3
+
+Time: 2 hours
+
+Start with"
+- Fork the repository
+- Clone the forked repository
+- Create a new branch
+
+Tasks:
+- Create first commit for your task description only
+- The code should take user input and perform the following operations:
+
+Student 1
+- Arithmetic operations (addition, subtraction, multiplication, division)
+- Trigonometric operations (sin, cos, tan)
+
+Student 2
+- Logarithmic operations (log, ln)
+- Exponential operations (exp, sqrt)
+- Degree to radian conversion, radian to degree conversion
+
+Student 3
+- Area of a circle, area of a triangle, area of a rectangle
+- Volume of a sphere, volume of a cylinder, volume of a cone
+- Find pythagorean triplets
+
+2. Project title: Data plotting application with Git and Version Control
+
+Dataset: [Iris dataset](https://archive.ics.uci.edu/ml/datasets/iris)
+
+Description: Create a data plotting application using Python and use Git and GitHub for version control
+
+No. of students: 3
+
+Time: 2 hours
+
+Start with:
+- Fork the repository
+- Clone the forked repository
+- Create a new branch
+
+Tasks:
+- Create first commit for your task description only
+- The code should take user input and perform the following operations:
+
+Student 1
+- Plot the data using a scatter plot
+- Plot the data using a line plot
+
+Student 2
+- Plot the data using a bar plot
+- Plot the data using a histogram
+
+Student 3
+- Plot the data using a box plot
+- Plot the data using a violin plot
+- Find the mean, median, mode, standard deviation, variance, and range of the data
+
+3. Project title: basic image processing application with Git and Version Control
+
+Requirements:
+- Python 3.6 or higher
+- OpenCV
+- Numpy
+
+Description: Create a basic image processing application using Python and use Git and GitHub for version control
+
+No. of students: 3 (group 1)
+
+No. of students: 3 (group 2)
+
+Time: 2 hours
+
+Start with:
+- Fork the repository
+- Clone the forked repository
+- Create a new branch
+
+Tasks:
+- Create first commit for your task description only
+
+Student 1
+- Read an image
+- Display the image
+- Save the image
+- Convert the image to grayscale
+- Convert the image to binary
+- Convert the image to HSV
+
+Student 2
+
+- Read an image
+- Display the image
+- Save the image
+- Resize the image
+- Crop the image
+- Rotate the image
+
+Student 3
+- Read an image
+- Display the image
+- Save the image
+- Blur the image
+- Sharpen the image
+- Edge detection
+
+
+4. Project title: validating credit card numbers with Git and Version Control
+
+Description: Create a program to validate credit card numbers using Python and use Git and GitHub for version control
+
+No. of students: 2
+
+Time: 2 hours
+
+Start with:
+- Fork the repository
+- Clone the forked repository
+- Create a new branch
+
+Tasks:
+- Create first commit for your task description only
+
+NOTE: Get the PDF file
+
+Student 1 & 2: divide the check condition into two parts
+
+5. Project title: Validating email addresses with Git and Version Control
+
+Description: Create a program to validate email addresses using Python and use Git and GitHub for version control
+
+No. of students: 2
+
+Time: 2 hours
+
+Start with:
+- Fork the repository
+- Clone the forked repository
+- Create a new branch
+
+Tasks:
+- Create first commit for your task description only
+
+Note: Get the PDF file
+
+Student 1 & 2: divide the check condition into two parts
