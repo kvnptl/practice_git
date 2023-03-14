@@ -74,6 +74,8 @@ unset color_prompt force_color_prompt
 
 6. Also, put all the foundation course files on your GitHub account
 
+7. Get the Git cheatsheet from Github Education| [Git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+
 ### Basic git workflow:
 
 1. Configure Git on your computer using the following commands:
@@ -895,8 +897,6 @@ git stash drop <stash-name>
 
 ### Advance git commands
 
-- Git stash
-   - Used for saving the changes that you don't want to commit
 - Git rebase
     - Used for changing the base commit of a branch
 - Git cherry-pick
