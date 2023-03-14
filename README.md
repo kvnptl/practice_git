@@ -35,20 +35,64 @@
 sudo apt install git
 ```
 
-4. From today onwards, use git to manage all your projects
+4. [Optional] If you want to see the active branch name in your terminal, something like this:
+        
+```bash
+user@computer:~/path/to/your/project (branch-name)$
+```
 
-5. Also, put all the foundation course files on your GitHub account
+Then, you can add the following lines to your bashrc file:
+
+Note: What is a bashrc file? It is a file that is executed every time you open a terminal. It is used to set up your terminal environment.
+
+- Open the bashrc file using the following command:
+
+```bash
+gedit ~/.bashrc
+```
+
+- Add the following lines at the end of the file:
+
+    
+```bash
+# Show git branch name
+force_color_prompt=yes
+color_prompt=yes
+parse_git_branch() {
+ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+if [ "$color_prompt" = yes ]; then
+ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
+else
+ PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
+fi
+unset color_prompt force_color_prompt
+```
+
+
+5. From today onwards, use git to manage all your projects
+
+6. Also, put all the foundation course files on your GitHub account
 
 ### Basic git workflow:
 
-4. Configure Git on your computer using the following commands:
+1. Configure Git on your computer using the following commands:
+
+- First check if you have Git configured on your computer using the following command:
+
+```bash
+git config --list
+```
+
+- If you don't have Git configured on your computer, then configure it using the following commands:
+
 
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "dontcopythis@whatever.com"
 ```
 
-5. Create a new directory on your computer and clone the repository you created on GitHub using the following command:
+2. Create a new directory on your computer and clone the repository you created on GitHub using the following command:
 
 ```bash
 git clone <repo-link>
@@ -56,14 +100,14 @@ cd <repo-name>
 ls -a
 ```
 
-6. Create a readme file and add some text to it using the following command:
+3. Create a readme file and add some text to it using the following command:
 
 ```bash
 touch README.md # md stands for markdown
 gedit README.md # or use your favorite text editor (e.g. vim, nano, etc.)
 ```
 
-7. Check the status of the repository using the following command:
+4. Check the status of the repository using the following command:
 
 ```bash
 git status
@@ -71,13 +115,13 @@ git status
 
 - You should see that the readme file is untracked and that you have one untracked file
 
-8. Add the readme file to the staging area using the following command:
+5. Add the readme file to the staging area using the following command:
 
 ```bash
 git add README.md
 ```
 
-9. Check the status of the repository using the following command:
+6. Check the status of the repository using the following command:
 
 ```bash
 git status
@@ -85,13 +129,13 @@ git status
 
 - You should see that the readme file is staged and that you have one staged file (in green)
 
-10. Commit the readme file to the repository using the following command:
+7. Commit the readme file to the repository using the following command:
 
 ```bash
 git commit -m "Add README.md" # -m stands for message
 ```
 
-11. Check the status of the repository using the following command:
+8. Check the status of the repository using the following command:
 
 ```bash
 git status
@@ -99,7 +143,7 @@ git status
 
 - You should see that the readme file is committed and that you have one committed file (in green)
 
-12. Check the log of the repository using the following command:
+9. Check the log of the repository using the following command:
 
 ```bash
 git log
@@ -118,7 +162,7 @@ git log --oneline
 - It shows the commit hash and the commit message
 - You can exit the log by pressing `q`
 
-13. Push the changes to the remote repository using the following command:
+10. Push the changes to the remote repository using the following command:
 
 ```bash
 git push <remote-name> <branch-name>
@@ -131,7 +175,7 @@ git remote -v # -v stands for verbose
 git branch
 ```
 
-14. Check the status of the repository using the following command:
+11. Check the status of the repository using the following command:
 
 ```bash
 git status
@@ -139,9 +183,9 @@ git status
 
 - You should see that the readme file is up to date and that you have nothing to commit
 
-15. Make some changes to the readme file and save them
+12. Make some changes to the readme file and save them
 
-16. Check the status of the repository using the following command:
+13. Check the status of the repository using the following command:
 
 ```bash
 git status
@@ -149,13 +193,13 @@ git status
 
 - You should see that the readme file is modified and that you have one modified file
 
-17. Add the readme file to the staging area using the following command:
+14. Add the readme file to the staging area using the following command:
 
 ```bash
 git add README.md
 ```
 
-18. Check the status of the repository using the following command:
+15. Check the status of the repository using the following command:
 
 ```bash
 git status
@@ -163,10 +207,32 @@ git status
 
 - You should see that the readme file is staged and that you have one staged file (in green)
 
-19. Commit the readme file to the repository using the following command:
+16. Commit the readme file to the repository using the following command:
 
 ```bash
 git commit -m "Update README.md"
+```
+
+17. Check the status of the repository using the following command:
+
+```bash
+git status
+```
+
+- You should see that the readme file is committed and that you have one committed file (in green)
+
+18. Check the log of the repository using the following command:
+
+```bash
+git log
+```
+
+- You should see the history of the repository
+
+19. Push the changes to the remote repository using the following command:
+
+```bash
+git push <remote-name> <branch-name>
 ```
 
 20. Check the status of the repository using the following command:
@@ -175,29 +241,9 @@ git commit -m "Update README.md"
 git status
 ```
 
-- You should see that the readme file is committed and that you have one committed file (in green)
-
-21. Check the log of the repository using the following command:
-
-```bash
-git log
-```
-
-- You should see the history of the repository
-
-22. Push the changes to the remote repository using the following command:
-
-```bash
-git push <remote-name> <branch-name>
-```
-
-23. Check the status of the repository using the following command:
-
-```bash
-git status
-```
-
 - You should see that the readme file is up to date and that you have nothing to commit
+
+Note: a few numbers are missing, but you can still follow the tutorial
 
 ### Now that you know the basic commands, we'll go through some more advanced commands
 
@@ -711,7 +757,7 @@ git merge <remote-name>/<branch-name>
 
 102. Check the readme file and you will see that the changes are there
 
-## !!! ALWAYS REMEMBER TO 'PULL' BEFORE YOU 'PUSH' !!!
+## !!! ALWAYS REMEMBER TO 'PULL' CHANGES BEFORE YOU 'PUSH' CHANGES !!!
 
 ### Git pull request
 
