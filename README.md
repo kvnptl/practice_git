@@ -274,15 +274,7 @@ git restore --staged README.md
 ```
 
 - This command will undo the changes in the staging area
-- You can see the command on your terminal when check the status of the repository
-
-- You can also use the following command (optional):
-
-```bash
-git reset HEAD README.md
-```
-
-- The difference between the two commands is that `git restore` is a newer command and it's more intuitive
+- You can see the same command in the git status output
 
 29. Check the status of the repository using the following command:
 
@@ -303,8 +295,9 @@ git reset --soft <commit-hash>
 ```
 
 - The difference between the two commands is that the first one will undo the last commit, and the second one will undo the commit with the specified commit hash
+- `reset --soft` means that the changes will be in the staging area
 
-- There are different types of reset, and you can read more about them [here](https://git-scm.com/docs/git-reset)
+- There are different types of reset, like `reset --mixed` and `reset --hard`, that you can read about [here](https://git-scm.com/docs/git-reset)
 
 31. Check the status of the repository using the following command:
 
@@ -819,6 +812,86 @@ git push <remote-name> <branch-name>
 118. Check the status of the pull request and you will see that it's merged
 
 119. Go to the forked repository on the GitHub website and you will see that the changes are there
+
+
+### Git stash
+
+- Suppose that you have some changes that you don't want to commit, but you want to switch to another branch
+- You can use the stash command to save the changes and apply them later
+
+120. Checkout to the main branch using the following command:
+
+```bash
+git checkout main
+```
+
+121. Add some changes to the readme file and save them
+
+122. Check the status of the repository using the following command:
+
+```bash
+git status
+```
+
+123. Try to switch to the new branch using the following command:
+
+```bash
+git checkout <branch-name>
+```
+
+- You will get an error
+
+```bash
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+```
+
+124. Use the following command to stash the changes:
+
+```bash
+git stash save "<some stash name>"
+```
+
+125. Now you can switch to the new branch:
+
+```bash
+git checkout <branch-name>
+```
+
+126. Switch back to the main branch:
+
+```bash
+git checkout main
+```
+
+127. Use the following command to list down all the stashes:
+
+```bash
+git stash list
+```
+
+128. Use the following command to apply the changes:
+
+```bash
+git stash apply <stash-name>
+```
+or
+
+- You can pop the changes using the following command:
+
+```bash
+git stash pop <stash-name>
+```
+
+- The difference between the two commands is that the first one will apply the changes and keep the stash, and the second one will apply the changes and delete the stash
+
+129. Delete the stash using the following command:
+
+```bash
+git stash drop <stash-name>
+```
 
 ### Advance git commands
 
