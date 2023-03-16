@@ -816,22 +816,27 @@ Note: Only the owner of the original repository can merge the pull request
 120. Create a new branch using the following command:
 
 ```bash
-git branch "testing_stash"
+git checkout -b stash_test
 ```
 
-121. On the main branch, add some changes to the readme file and save them
+121. Add some changes to the readme file and save them
 
-122. Check the status of the repository using the following command:
+122. Add the readme file to the staging area and commit the changes using the following commands:
 
 ```bash
-git status
+git add README.md
+git commit -m "put some changes in the readme file"
 ```
 
-123. Try to switch to the new branch using the following command:
+123. Switch to the main branch using the following command:
 
 ```bash
 git checkout <branch-name>
 ```
+
+124. Add some changes to the readme file and save them
+
+125. Try to switch to the `stash_test` branch:
 
 - You will get an error
 
@@ -842,31 +847,31 @@ Please commit your changes or stash them before you switch branches.
 Aborting
 ```
 
-124. Use the following command to stash the changes:
+126. Use the following command to stash the changes:
 
 ```bash
 git stash save "<some stash name>"
 ```
 
-125. Now you can switch to the new branch:
+127. Now you can switch to the new branch:
 
 ```bash
 git checkout <branch-name>
 ```
 
-126. Switch back to the main branch:
+128. Switch back to the main branch:
 
 ```bash
 git checkout main
 ```
 
-127. Use the following command to list down all the stashes:
+129. Use the following command to list down all the stashes:
 
 ```bash
 git stash list
 ```
 
-128. Use the following command to apply the changes:
+130. Use the following command to apply the changes:
 
 ```bash
 git stash apply <stash-name>
@@ -881,7 +886,7 @@ git stash pop <stash-name>
 
 - The difference between the two commands is that the first one will apply the changes and keep the stash, and the second one will apply the changes and delete the stash
 
-129. Delete the stash using the following command:
+131. Delete the stash using the following command:
 
 ```bash
 git stash drop <stash-name>
@@ -946,14 +951,18 @@ No. of students: 3
 
 Time: 2 hours
 
-Start with"
-- Fork the repository
-- Clone the forked repository
-- Create a new branch
+Start with
+
+- Only one student should fork this repository: [fc-ss23-git](https://github.com/kvnptl/fc-ss23-git)
+- Add the other 2 students as collaborators to the repository (On GitHub, go to Settings > Collaborators > Add people)
+- Everyone should clone the forked repository
+- Each student should create a new branch for his/her task
 
 Tasks:
 - Create first commit for your task description only
-- The code should take user input and perform the following operations:
+- Develop a separate function for each functionality
+- The code should take user input(if applicable) and display the result
+
 
 Student 1
 - Arithmetic operations (addition, subtraction, multiplication, division)
@@ -971,7 +980,7 @@ Student 3
 
 **2. Project title: Data plotting application with Git and Version Control**
 
-Dataset: [Iris dataset](https://archive.ics.uci.edu/ml/datasets/iris)
+Download dataset: [Iris dataset](https://archive.ics.uci.edu/ml/datasets/iris)
 
 Description: Create a data plotting application using Python and use Git and GitHub for version control
 
@@ -980,17 +989,22 @@ No. of students: 3
 Time: 2 hours
 
 Start with:
-- Fork the repository
-- Clone the forked repository
-- Create a new branch
+
+- Only one student should fork this repository: [fc-ss23-git](https://github.com/kvnptl/fc-ss23-git)
+- Add the other 2 students as collaborators to the repository (On GitHub, go to Settings > Collaborators > Add people)
+- Everyone should clone the forked repository
+- Each student should create a new branch for his/her task
 
 Tasks:
+
 - Create first commit for your task description only
-- The code should take user input and perform the following operations:
+- Develop a separate function for each functionality
+- The code should take user input(if applicable) and display the result
 
 Student 1
 - Plot the data using a scatter plot
 - Plot the data using a line plot
+- Find the mean, median, mode, standard deviation, variance, and range of the data
 
 Student 2
 - Plot the data using a bar plot
@@ -999,12 +1013,12 @@ Student 2
 Student 3
 - Plot the data using a box plot
 - Plot the data using a violin plot
-- Find the mean, median, mode, standard deviation, variance, and range of the data
 
-**3. Project title: basic image processing application with Git and Version Control**
+
+**3. Project title: Basic image processing application with Git and Version Control**
 
 Requirements:
-- Python 3.6 or higher
+- Python
 - OpenCV
 - Numpy
 
@@ -1017,12 +1031,17 @@ No. of students: 3 (group 2)
 Time: 2 hours
 
 Start with:
-- Fork the repository
-- Clone the forked repository
-- Create a new branch
+
+- Only one student should fork this repository: [fc-ss23-git](https://github.com/kvnptl/fc-ss23-git)
+- Add the other 2 students as collaborators to the repository (On GitHub, go to Settings > Collaborators > Add people)
+- Everyone should clone the forked repository
+- Each student should create a new branch for his/her task
 
 Tasks:
+
 - Create first commit for your task description only
+- Develop a separate function for each functionality
+- The code should take user input(if applicable) and display the result
 
 Student 1
 - Read an image
@@ -1068,7 +1087,7 @@ Tasks:
 
 NOTE: Get the PDF file
 
-Student 1 & 2: divide the check condition into two parts
+Student 1 & 2: divide the check conditions into two parts
 
 **5. Project title: Validating email addresses with Git and Version Control**
 
@@ -1079,13 +1098,18 @@ No. of students: 2
 Time: 2 hours
 
 Start with:
-- Fork the repository
-- Clone the forked repository
-- Create a new branch
+
+- Only one student should fork this repository: [fc-ss23-git](https://github.com/kvnptl/fc-ss23-git)
+- Add the other 2 students as collaborators to the repository (On GitHub, go to Settings > Collaborators > Add people)
+- Everyone should clone the forked repository
+- Each student should create a new branch for his/her task
 
 Tasks:
+
 - Create first commit for your task description only
+- Develop a separate function for each functionality
+- The code should take user input(if applicable) and display the result
 
 Note: Get the PDF file
 
-Student 1 & 2: divide the check condition into two parts
+Student 1 & 2: divide the check conditions into two parts
