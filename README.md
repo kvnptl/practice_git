@@ -1129,6 +1129,4 @@ Tasks:
 - The code should take user input(if applicable) and display the result
 - After completing the task, create a pull request to the `fc-ss23-git` repository's `main` branch
 
-Note: Get the PDF file
-
 Student 1 & 2: divide the check conditions into two parts
