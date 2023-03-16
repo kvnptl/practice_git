@@ -957,11 +957,13 @@ Start with
 - Add the other 2 students as collaborators to the repository (On GitHub, go to Settings > Collaborators > Add people)
 - Everyone should clone the forked repository
 - Each student should create a new branch for his/her task
+- Work on the `calculator_application.py` file
 
 Tasks:
 - Create first commit for your task description only
 - Develop a separate function for each functionality
 - The code should take user input(if applicable) and display the result
+- After completing the task, create a pull request to the `fc-ss23-git` repository's `main` branch
 
 
 Student 1
@@ -978,7 +980,7 @@ Student 3
 - Volume of a sphere, volume of a cylinder, volume of a cone
 - Find pythagorean triplets
 
-**2. Project title: Data plotting application with Git and Version Control**
+**2. Project title: IRIS data plotting with Git and Version Control**
 
 Download dataset: [Iris dataset](https://archive.ics.uci.edu/ml/datasets/iris)
 
@@ -994,12 +996,14 @@ Start with:
 - Add the other 2 students as collaborators to the repository (On GitHub, go to Settings > Collaborators > Add people)
 - Everyone should clone the forked repository
 - Each student should create a new branch for his/her task
+- Work on the `iris_data_plotting.py` file
 
 Tasks:
 
 - Create first commit for your task description only
 - Develop a separate function for each functionality
 - The code should take user input(if applicable) and display the result
+- After completing the task, create a pull request to the `fc-ss23-git` repository's `main` branch
 
 Student 1
 - Plot the data using a scatter plot
@@ -1024,6 +1028,8 @@ Requirements:
 
 Description: Create a basic image processing application using Python and use Git and GitHub for version control
 
+Resources: find sample images [here](https://github.com/kvnptl/fc-ss23-git/tree/main/basic_image_processing/images)
+
 No. of students: 3 (group 1)
 
 No. of students: 3 (group 2)
@@ -1036,12 +1042,14 @@ Start with:
 - Add the other 2 students as collaborators to the repository (On GitHub, go to Settings > Collaborators > Add people)
 - Everyone should clone the forked repository
 - Each student should create a new branch for his/her task
+- Work on the `basic_image_processing_application.py` file
 
 Tasks:
 
 - Create first commit for your task description only
 - Develop a separate function for each functionality
 - The code should take user input(if applicable) and display the result
+- After completing the task, create a pull request to the `fc-ss23-git` repository's `main` branch
 
 Student 1
 - Read an image
@@ -1073,25 +1081,7 @@ Student 3
 
 Description: Create a program to validate credit card numbers using Python and use Git and GitHub for version control
 
-No. of students: 2
-
-Time: 2 hours
-
-Start with:
-- Fork the repository
-- Clone the forked repository
-- Create a new branch
-
-Tasks:
-- Create first commit for your task description only
-
-NOTE: Get the PDF file
-
-Student 1 & 2: divide the check conditions into two parts
-
-**5. Project title: Validating email addresses with Git and Version Control**
-
-Description: Create a program to validate email addresses using Python and use Git and GitHub for version control
+Resources: find the instructions [here](https://github.com/kvnptl/fc-ss23-git/blob/main/validating_credit_card_numbers/instructions/validating_credit_card_numbers.pdf)
 
 No. of students: 2
 
@@ -1103,12 +1093,41 @@ Start with:
 - Add the other 2 students as collaborators to the repository (On GitHub, go to Settings > Collaborators > Add people)
 - Everyone should clone the forked repository
 - Each student should create a new branch for his/her task
+- Work on the `validating_credit_card_numbers.py` file
 
 Tasks:
 
 - Create first commit for your task description only
 - Develop a separate function for each functionality
 - The code should take user input(if applicable) and display the result
+- After completing the task, create a pull request to the `fc-ss23-git` repository's `main` branch
+
+Student 1 & 2: divide the check conditions into two parts
+
+**5. Project title: Validating email addresses with Git and Version Control**
+
+Description: Create a program to validate email addresses using Python and use Git and GitHub for version control
+
+Resources: find the instructions [here](https://github.com/kvnptl/fc-ss23-git/blob/main/validating_email_addresses/instructions/validating_email_addresses.pdf)
+
+No. of students: 2
+
+Time: 2 hours
+
+Start with:
+
+- Only one student should fork this repository: [fc-ss23-git](https://github.com/kvnptl/fc-ss23-git)
+- Add the other 2 students as collaborators to the repository (On GitHub, go to Settings > Collaborators > Add people)
+- Everyone should clone the forked repository
+- Each student should create a new branch for his/her task
+- Work on the `validating_email_addresses.py` file
+
+Tasks:
+
+- Create first commit for your task description only
+- Develop a separate function for each functionality
+- The code should take user input(if applicable) and display the result
+- After completing the task, create a pull request to the `fc-ss23-git` repository's `main` branch
 
 Note: Get the PDF file
 
