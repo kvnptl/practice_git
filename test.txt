@@ -1,6 +1,0 @@
-hello
-how are you?
-are you fine?
-I'm fine
-New update!
-Now, I know how to do fetch and merge.
