@@ -74,7 +74,7 @@ unset color_prompt force_color_prompt
 
 6. Also, put all the foundation course files on your GitHub account
 
-7. Get the Git cheatsheet from Github Education| [Git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+7. Get the Git cheatsheet from Github Education | [Git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 
 ### Basic git workflow:
 
@@ -425,8 +425,6 @@ git commit -m "put some changes in the readme file"
 git status
 ```
 
-#### Note: you created a new branch and you made some changes to the readme file, but you didn't push the changes to the remote repository, so if you switch to the main branch, you will see that the readme file is not updated
-
 46. Switch to the main branch using the following command:
 
 ```bash
@@ -509,7 +507,7 @@ git merge --no-ff <branch-name> # --no-ff means no fast-forward
 git push <remote-name> <branch-name>
 ```
 
-- Don't forget to update the branch name
+- Don't forget to put the correct branch name
 
 #### Now we'll see how to delete a branch
 
@@ -533,7 +531,14 @@ git branch -d <branch-name>
 git branch
 ```
 
-- You should see that you are on the main branch and that you don't have a new branch
+- You should see that you are on the main branch and that you don't have that branch anymore
+
+NOTE: If you want to update the remote repository with the deleted branch, you can use the following command:
+
+```bash
+git push <remote-name> --delete <branch-name>
+```
+
 
 ### Merge conflicts
 
@@ -664,21 +669,23 @@ git pull <remote-name> <branch-name>
 
 - This command will fetch the changes from the remote repository and merge them to the local repository
 
-#### Now we'll see difference between git pull and git fetch
+#### Now we'll see git fetch and git merge
 
 82. Create a new branch using the following command:
 
 ```bash
-git checkout -b <branch-name>
+git branch <branch-name>
 ```
 
-83. Add some changes to the readme file and save them
-
-84. Check the status of the repository using the following command:
+83. Check the list of branches:
 
 ```bash
-git status
+git branch
 ```
+
+- You should see that you have a new branch but you are still on the main branch
+
+84. Add some changes to the readme file and save them
 
 85. Add the readme file to the staging area and commit the changes using the following commands:
 
@@ -687,70 +694,54 @@ git add README.md
 git commit -m "put some changes in the readme file"
 ```
 
-86. Switch to the main branch using the following command:
-
-```bash
-git checkout main
-```
-
-87. Add some changes to the readme file and save them
-
-88. Check the status of the repository using the following command:
-
-```bash
-git status
-```
-
-89. Add the readme file to the staging area and commit the changes using the following commands:
-
-```bash
-git add README.md
-git commit -m "put some changes in the readme file"
-```
-
-95. Push the changes to the remote repository using the following command:
+86. Push the changes to the remote repository using the following command:
 
 ```bash
 git push <remote-name> <branch-name>
 ```
 
-- Don't forget to update the branch name
+- Check on the github website and you will see that the changes are there
 
-96. Switch to the new branch using the following command:
+87. Now switch to the new branch that you just created before:
 
 ```bash
 git checkout <branch-name>
 ```
 
-97. Use the following command:
-
-```bash
-git pull <remote-name> <branch-name>
-```
-
-- This command will fetch the changes from the remote repository and merge them to the local repository
-
-98. Check the readme file and you will see that the changes are there 
-
-99. Use the following command:
+88. Run the following command to fetch the changes from the remote repository:
 
 ```bash
 git fetch <remote-name> <branch-name>
 ```
 
-- This command will fetch the changes from the remote repository
+example: `git fetch origin main`
 
-100. Check the readme file and you will see that the changes are not there
+- This command will fetch the changes from the remote repository but it won't merge them to the local repository (you can check the readme file and you will see that the changes are not there)
 
-101. Use the following command:
+89. You can review the changes that you fetched from the remote repository using the following command:
 
 ```bash
+git checkout <remote-name>/<branch-name>
+```
+
+example: `git checkout origin/main`
+
+- This command will create a new branch that is a copy of the remote branch and you can review the changes that you fetched from the remote repository
+- Note that you are on the detached HEAD state
+
+90. If you are ok with the changes that you fetched from the remote repository, you can merge them to the local repository but before that switch back to the new branch that you created before:
+
+```bash
+git checkout <branch-name>
 git merge <remote-name>/<branch-name>
 ```
 
-- This command will merge the changes from the remote repository to the local repository
+example: `git merge origin/main`
 
-102. Check the readme file and you will see that the changes are there
+- This command will merge the changes to the local active branch
+- You can check the readme file and you will see that the changes are there
+
+Note: a few numbers are missing, but you can still follow the tutorial
 
 ## !!! ALWAYS REMEMBER TO 'PULL' CHANGES BEFORE YOU 'PUSH' CHANGES !!!
 
@@ -793,11 +784,11 @@ git commit -m "put some changes in the readme file"
 git push <remote-name> <branch-name>
 ```
 
-- This command will push the changes to the forked repository, not to the original repository
+- This command will push the changes to the forked repository, not to the original repository that you forked from
 
 110. Go to the forked repository on the GitHub website and you will see that you have a new branch
 
-111. Click on the 'Compare & pull request' button
+111. Click on the 'Compare & pull request' button or 'Contribute' button
 
 112. Add a title and a description and click on the 'Create pull request' button
 
@@ -805,29 +796,30 @@ git push <remote-name> <branch-name>
 
 114. Go to the original repository on the GitHub website and you will see that you have a new pull request
 
+Note: Only the owner of the original repository can merge the pull request
+
 115. Click on the 'Merge pull request' button
 
 116. Click on the 'Confirm merge' button
 
-117. Click on the 'Delete branch' button
+117. Check the status of the pull request and you will see that it's merged
 
-118. Check the status of the pull request and you will see that it's merged
+118. Go to the forked repository on the GitHub website and you will see that the changes are there
 
-119. Go to the forked repository on the GitHub website and you will see that the changes are there
-
+119. If you want, you can delete the branch that you created before
 
 ### Git stash
 
 - Suppose that you have some changes that you don't want to commit, but you want to switch to another branch
 - You can use the stash command to save the changes and apply them later
 
-120. Checkout to the main branch using the following command:
+120. Create a new branch using the following command:
 
 ```bash
-git checkout main
+git branch "testing_stash"
 ```
 
-121. Add some changes to the readme file and save them
+121. On the main branch, add some changes to the readme file and save them
 
 122. Check the status of the repository using the following command:
 
