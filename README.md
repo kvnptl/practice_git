@@ -536,7 +536,7 @@ git branch
 NOTE: If you want to update the remote repository with the deleted branch, you can use the following command:
 
 ```bash
-git push <remote-name> --delete <branch-name>
+git push <remote-name> --delete <branch-name> # enter the name of the branch that you want to delete
 ```
 
 
