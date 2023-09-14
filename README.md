@@ -70,6 +70,7 @@ fi
 unset color_prompt force_color_prompt
 ```
 
+5. If you want to clone and push without using a password, follow these steps to enable SSH key [HERE](https://github.com/kvnptl/practice_git/blob/main/git_clone_with_ssh.md)
 
 5. From today onwards, use git to manage all your projects
 
