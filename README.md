@@ -17,6 +17,7 @@
 - Git remote
 - Git clone
 - Git fetch
+- Git submodule
 - Fork
 - Pull request
 - Github issues
@@ -891,6 +892,57 @@ git stash pop <stash-name>
 ```bash
 git stash drop <stash-name>
 ```
+
+### Git submodules
+
+- Git submodules allow you to keep a Git repository as a subdirectory of another Git repository.
+- They are useful when you want to include another project inside your project. For example, a library or framework.
+- For example, you're developing a software framework for your custom robot and for robot perception you want to use YOLO object detection. You can create a submodule for YOLO and include it inside your project without having to copy code from YOLO to your project.
+
+132. Create a new submodule using the following command:
+    
+```bash
+git submodule add <url> <submodule-name>
+```
+- This command will create a new submodule in the current directory
+- Check the status of the repository using `git status`, and you will see, below the list of files that need to be committed:
+```bash
+.gitmodules
+<submodule-name>
+```
+
+133. If you want to clone a project with submodules, you can use the following command:
+
+- Before, push everything to the remote repository
+- Then delete the entire repository from your local machine
+- Now, clone the repo using the following command:
+```bash
+git clone --recurse-submodules <url>
+```
+- This will clone the main project and also initialize and clone any submodules.
+
+or 
+
+if you forget the submodules while cloning a repo, you can later use the following command:
+```bash
+git submodule update --init --recursive
+```
+
+
+134. To update the submodule to the latest commit,
+```bash
+git submodule update --remote
+```
+
+135. To remove a submodule,
+```bash
+git rm <submodule-name>
+```
+Some points to note:
+
+- Submodules allow you to keep a dependency in your project repository without having unrelated history cloned.
+- The submodule acts like a separate repository, with its own commits, branches etc. inside the host repository.
+- The host repository only stores the submodule's commit hash, and not the actual code. So, to keep the main repository clean and focused on the project itself.
 
 ### Advance git commands
 
