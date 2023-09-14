@@ -919,7 +919,9 @@ git submodule add <url> <submodule-name>
 <submodule-name>
 ```
 
-133. If you want to clone a project with submodules, you can use the following command:
+133. Commit and push it to the remote repository. Check your repo on GitHub.
+
+134. If you want to clone a project with submodules, you can use the following command:
 
 - Before, push everything to the remote repository
 - Then delete the entire repository from your local machine
