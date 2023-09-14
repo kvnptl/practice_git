@@ -959,6 +959,13 @@ Some points to note:
 - The submodule acts like a separate repository, with its own commits, branches, etc., inside the host repository.
 - The host repository only stores the submodule's commit hash and not the actual code. So, to keep the main repository clean and focused on the project itself.
 
+### GitHub Issues
+
+### .gitignore file
+- The `.gitignore` file is a text file used by Git to specify files and directories that should be ignored when tracking changes in a Git repository. It's a powerful tool for controlling which files and folders are considered when making commits.
+- For example, while training a deep-learning model, it saves model weights files as .pth, .pkl, or .onnx, etc. Those are sometimes in MBs or GBs. To avoid pushing the model to our repo, we add them to a `.gitignore` file.
+- Similarly, dataset (.zip) files, binary files, temp config files, etc.
+
 ### Advance git commands
 
 - Git rebase
