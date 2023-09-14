@@ -325,10 +325,10 @@ git log
 
 - You should see the history of the repository
 
-34. Push the changes to the remote repository using the following command:
+34. Push the changes to the remote repository using the following command (try without -f, and then with -f):
 
 ```bash
-git push <remote-name> <branch-name>
+git push -f <remote-name> <branch-name>
 ```
 
 35. Check the status of the repository using the following command:
