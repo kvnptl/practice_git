@@ -356,9 +356,9 @@ git diff --staged <file-name> # remove --staged, if it is just modified and not 
 ### Now we'll see how to create a new branch
 
 - Branches are used to develop features isolated from each other
-- The master branch is the default branch when you create a repository
-- Generally, on real projects, you should never work on the master branch, and you should always create a new branch for each feature you want to develop
-- Master branch is used to deploy the application to production
+- The main branch is the default branch when you create a repository
+- Generally, on real projects, you should never work on the main branch, and you should always create a new branch for each feature you want to develop
+- Main branch is used to deploy the application to production
 
 37. List down all the branches using the following command:
 
