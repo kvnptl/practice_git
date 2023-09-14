@@ -875,6 +875,11 @@ git checkout main
 git stash list
 ```
 
+- If you want to see the content of any stash,
+```bash
+git stash show -m stash@{0} # put any number @{n} from the available stash
+```
+
 130. Use the following command to apply the changes:
 
 ```bash
