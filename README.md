@@ -20,7 +20,7 @@
 - Git submodule
 - Fork
 - Pull request
-- Github issues
+- GitHub issues
 - .gitignore file
 
 ### Requirements and commands to install:
@@ -70,19 +70,19 @@ fi
 unset color_prompt force_color_prompt
 ```
 
-5. If you want to clone and push without using a password, follow these steps to enable SSH key [HERE](https://github.com/kvnptl/practice_git/blob/main/git_clone_with_ssh.md)
+5. If you want to clone and push without using a password, follow these steps to enable the SSH key [HERE](https://github.com/kvnptl/practice_git/blob/main/git_clone_with_ssh.md)
 
 5. From today onwards, use git to manage all your projects
 
 6. Also, put all the foundation course files on your GitHub account
 
-7. Get the Git cheatsheet from Github Education | [Git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+7. Get the Git cheatsheet from GitHub Education | [Git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 
 ### Basic git workflow:
 
 1. Configure Git on your computer using the following commands:
 
-- First check if you have Git configured on your computer using the following command:
+- First, check if you have Git configured on your computer using the following command:
 
 ```bash
 git config --list
@@ -136,7 +136,7 @@ git status
 7. Commit the readme file to the repository using the following command:
 
 ```bash
-git commit -m "Add README.md" # -m stands for message
+git commit -m "Add README.md" # -m stands for a message
 ```
 
 8. Check the status of the repository using the following command:
@@ -172,7 +172,7 @@ git log --oneline
 git push <remote-name> <branch-name>
 ```
 
-- How to get the remote name and branch name on terminal:
+- How to get the remote name and branch name on the terminal:
 
 ```bash
 git remote -v # -v stands for verbose
@@ -286,7 +286,7 @@ git restore --staged README.md
 git status
 ```
 
-30. Now for example, you committed some changes and you want to undo the commit, you can use the following command:
+30. Now, for example, if you committed some changes and you want to undo the commit, you can use the following command:
 
 ```bash
 git reset --soft HEAD~1 # --soft means that the changes will be in the staging area
@@ -295,7 +295,7 @@ git reset --soft HEAD~1 # --soft means that the changes will be in the staging a
 or 
 
 ```bash
-git reset --soft <commit-hash> 
+git reset --soft <commit-hash> # commit id of the commit to go to
 ```
 
 - The difference between the two commands is that the first one will undo the last commit, and the second one will undo the commit with the specified commit hash
@@ -346,7 +346,7 @@ git diff <commit-hash> <commit-hash>
 ```
 
 - You can only compare two commits at a time
-- You can also compare the changes between the working directory and the staging area of a a specific file using the following command:
+- You can also compare the changes between the working directory and the staging area of a specific file using the following command:
 
 ```bash
 git diff --staged <file-name>
@@ -441,7 +441,7 @@ git branch
 
 - You should see that you are on the main branch
 
-48. Check the readme file and you will see that the changes are not there
+48. Check the readme file, and you will see that the changes are not there
 
 49. Switch to the new branch using the following command:
 
@@ -457,7 +457,7 @@ git branch
 
 - You should see that you are on the new branch
 
-51. Check the readme file and you will see that the changes are there
+51. Check the readme file, and you will see that the changes are there
 
 52. Push the changes to the remote repository using the following command:
 
@@ -595,7 +595,7 @@ git commit -m "put some changes in the readme file"
 git checkout <branch-name>
 ```
 
-70. Check the readme file and you will see that the both branches have different changes
+70. Check the readme file, and you will see that both branches have different changes
 
 71. Checkout the main branch using the following command:
 
@@ -611,7 +611,7 @@ git merge <branch-name>
 
 - You will get a merge conflict
 
-75. Check the readme file and you will see that the changes are not there
+75. Check the readme file, and you will see that the changes are not there
 
 76. Check the status of the repository using the following command:
 
@@ -621,7 +621,7 @@ git status
 
 - You will see that you have a merge conflict
 
-77. Open the readme file and you will see that you have a merge conflict 
+77. Open the readme file, and you will see that you have a merge conflict 
 
 78. How to solve a merge conflict:
 
@@ -661,7 +661,7 @@ git push <remote-name> <branch-name>
 ### Git pull
 
 - Git pull is a combination of git fetch and git merge
-- Suppose that you have a local repository and a remote repository, and you made some changes to the remote repository, so if you want to get the changes from the remote repository to the local repository
+- Suppose that you have a local repository and a remote repository, and you made some changes to the remote repository. so, if you want to get the changes from the remote repository to the local repository
 
 81. Use the following command:
 
@@ -702,7 +702,7 @@ git commit -m "put some changes in the readme file"
 git push <remote-name> <branch-name>
 ```
 
-- Check on the github website and you will see that the changes are there
+- Check on the GitHub website and you will see that the changes are there
 
 87. Now switch to the new branch that you just created before:
 
@@ -718,7 +718,7 @@ git fetch <remote-name> <branch-name>
 
 example: `git fetch origin main`
 
-- This command will fetch the changes from the remote repository but it won't merge them to the local repository (you can check the readme file and you will see that the changes are not there)
+- This command will fetch the changes from the remote repository, but it won't merge them to the local repository (you can check the readme file, and you will see that the changes are not there)
 
 89. You can review the changes that you fetched from the remote repository using the following command:
 
@@ -728,10 +728,10 @@ git checkout <remote-name>/<branch-name>
 
 example: `git checkout origin/main`
 
-- This command will create a new branch that is a copy of the remote branch and you can review the changes that you fetched from the remote repository
+- This command will create a new branch that is a copy of the remote branch, and you can review the changes that you fetched from the remote repository
 - Note that you are on the detached HEAD state
 
-90. If you are ok with the changes that you fetched from the remote repository, you can merge them to the local repository but before that switch back to the new branch that you created before:
+90. If you are ok with the changes that you fetched from the remote repository, you can merge them to the local repository, but before that, switch back to the new branch that you created before:
 
 ```bash
 git checkout <branch-name>
@@ -741,7 +741,7 @@ git merge <remote-name>/<branch-name>
 example: `git merge origin/main`
 
 - This command will merge the changes to the local active branch
-- You can check the readme file and you will see that the changes are there
+- You can check the readme file, and you will see that the changes are there
 
 Note: a few numbers are missing, but you can still follow the tutorial
 
@@ -751,7 +751,7 @@ Note: a few numbers are missing, but you can still follow the tutorial
 
 - A pull request is a way to tell others about changes you've pushed to a branch in a repository on GitHub
 
-103. Fork the repository that you want to contribute to (you can fork it from the GitHub website)
+103. Fork the repository that you want to contribute to (you can fork it from the GitHub website).
 
 104. Clone the forked repository using the following command:
 
@@ -765,7 +765,7 @@ git clone <repository-url>
 git checkout -b <branch-name>
 ```
 
-106. Add some changes to some file and save them
+106. Add some changes to some files and save them
 
 107. Check the status of the repository using the following command:
 
@@ -788,15 +788,15 @@ git push <remote-name> <branch-name>
 
 - This command will push the changes to the forked repository, not to the original repository that you forked from
 
-110. Go to the forked repository on the GitHub website and you will see that you have a new branch
+110. Go to the forked repository on the GitHub website, and you will see that you have a new branch
 
 111. Click on the 'Compare & pull request' button or 'Contribute' button
 
-112. Add a title and a description and click on the 'Create pull request' button
+112. Add a title and a description, and click on the 'Create pull request' button
 
-113. Check the status of the pull request and you will see that it's waiting for approval
+113. Check the status of the pull request, and you will see that it's waiting for approval
 
-114. Go to the original repository on the GitHub website and you will see that you have a new pull request
+114. Go to the original repository on the GitHub website, and you will see that you have a new pull request
 
 Note: Only the owner of the original repository can merge the pull request
 
@@ -804,9 +804,9 @@ Note: Only the owner of the original repository can merge the pull request
 
 116. Click on the 'Confirm merge' button
 
-117. Check the status of the pull request and you will see that it's merged
+117. Check the status of the pull request, and you will see that it's merged
 
-118. Go to the forked repository on the GitHub website and you will see that the changes are there
+118. Go to the forked repository on the GitHub website, and you will see that the changes are there
 
 119. If you want, you can delete the branch that you created before
 
@@ -942,8 +942,8 @@ git rm <submodule-name>
 Some points to note:
 
 - Submodules allow you to keep a dependency in your project repository without having unrelated history cloned.
-- The submodule acts like a separate repository, with its own commits, branches etc. inside the host repository.
-- The host repository only stores the submodule's commit hash, and not the actual code. So, to keep the main repository clean and focused on the project itself.
+- The submodule acts like a separate repository, with its own commits, branches, etc., inside the host repository.
+- The host repository only stores the submodule's commit hash and not the actual code. So, to keep the main repository clean and focused on the project itself.
 
 ### Advance git commands
 
@@ -967,7 +967,7 @@ Some points to note:
 
 3. You've been working on a feature branch in Git, and you're ready to merge your changes back into the main branch. What command should you use to create a new merge commit that incorporates your changes?
 
-- Answer: `git merge <branch-name>`, from the branch you want to merge into (ex. `git merge feature` from the main branch)
+- Answer: `git merge <branch-name>` from the branch you want to merge into (e.g. `git merge feature` from the main branch)
 
 4. You've been working on a project using Git, and you've made some changes to a file. You want to commit those changes, but you don't want to commit all the changes you've made. What command can you use to add only the changes you want to commit?
 
@@ -1013,7 +1013,7 @@ Start with
 - Work on the `calculator_application.py` file
 
 Tasks:
-- Create first commit for your task description only
+- Create the first commit for your task description only
 - Develop a separate function for each functionality
 - The code should take user input(if applicable) and display the result
 - After completing the task, create a pull request to the `fc-ss23-git` repository's `main` branch
@@ -1053,7 +1053,7 @@ Start with:
 
 Tasks:
 
-- Create first commit for your task description only
+- Create the first commit for your task description only
 - Develop a separate function for each functionality
 - The code should take user input(if applicable) and display the result
 - After completing the task, create a pull request to the `fc-ss23-git` repository's `main` branch
@@ -1099,7 +1099,7 @@ Start with:
 
 Tasks:
 
-- Create first commit for your task description only
+- Create the first commit for your task description only
 - Develop a separate function for each functionality
 - The code should take user input(if applicable) and display the result
 - After completing the task, create a pull request to the `fc-ss23-git` repository's `main` branch
@@ -1150,7 +1150,7 @@ Start with:
 
 Tasks:
 
-- Create first commit for your task description only
+- Create the first commit for your task description only
 - Develop a separate function for each functionality
 - The code should take user input(if applicable) and display the result
 - After completing the task, create a pull request to the `fc-ss23-git` repository's `main` branch
