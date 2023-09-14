@@ -983,7 +983,7 @@ Some points to note:
 
 - Answer: `git merge <branch-name>` from the branch you want to merge into (e.g. `git merge feature` from the main branch)
 
-4. You've been working on a project using Git, and you've made some changes to a file. You want to commit those changes, but you don't want to commit all the changes you've made. What command can you use to add only the changes you want to commit?
+4. You're working on a project using Git and have made changes to multiple files. Now, you want to commit only specific changes and not all of them. What command can you use to do this?
 
 - Answer: `git add <file-name>`
 
@@ -998,6 +998,10 @@ Some points to note:
 7. Your team is working on a project using Git, and you want to create a new branch to work on a new feature. What command can you use to create a new branch?
 
 - Answer: `git checkout -b <branch-name>`
+
+8. You're actively involved in a collaborative project using Git, and you're currently working on a feature branch. However, it's still a work in progress. At this point, your project manager requests you to begin working on a completely new feature, Feature 2. What would be the recommended course of action in this situation?
+
+- Answer: `git stash save "some msg for pending work in feature branch"`
 
 ### Some online resources
 
