@@ -251,6 +251,8 @@ Note: a few numbers are missing, but you can still follow the tutorial
 
 ### Now that you know the basic commands, we'll go through some more advanced commands
 
+23. Create a new file, put some text, and stage it
+
 24. Add some changes to the readme file and save them
 
 25. Check the status of the repository using the following command:
