@@ -923,9 +923,14 @@ git submodule add <url> <submodule-name>
 
 134. If you want to clone a project with submodules, you can use the following command:
 
-- Before, push everything to the remote repository
-- Then delete the entire repository from your local machine
+- Create a new directory
 - Now, clone the repo using the following command:
+```bash
+git clone <url>
+```
+
+- Go back and create a new directory and clone using the following command:
+
 ```bash
 git clone --recurse-submodules <url>
 ```
@@ -939,12 +944,12 @@ git submodule update --init --recursive
 ```
 
 
-134. To update the submodule to the latest commit,
+135. To update the submodule to the latest commit,
 ```bash
 git submodule update --remote
 ```
 
-135. To remove a submodule,
+136. To remove a submodule,
 ```bash
 git rm <submodule-name>
 ```
