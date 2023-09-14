@@ -349,7 +349,7 @@ git diff <commit-hash> <commit-hash>
 - You can also compare the changes between the working directory and the staging area of a specific file using the following command:
 
 ```bash
-git diff --staged <file-name>
+git diff --staged <file-name> # remove --staged, if it is just modified and not staged 
 ```
 
 # Git Branches
