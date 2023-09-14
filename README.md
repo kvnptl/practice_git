@@ -973,7 +973,7 @@ Some points to note:
 
 1. You and your team are working on a project using Git. One of your team members has made some changes to a file, but they're not sure if they want to keep them or not. What Git command can they use to see the changes they've made and decide whether to keep them?
 
-- Answer: `git diff`
+- Answer: `git diff <file-name>`, similar to [#36](https://github.com/kvnptl/practice_git/tree/main#:~:text=Now%20we%27ll%20see%20how%20to%20compare%20the%20changes%20between%20two%20commits)
 
 2. You've been working on a project using Git, and you accidentally deleted a file that was important. What command can you use to restore the file to the state it was in before it was deleted?
 
