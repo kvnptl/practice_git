@@ -1,5 +1,6 @@
 # Version control and Git - Hands-on
 
+
 ### Overall topics:
 
 - Git add
@@ -1208,3 +1209,6 @@ Tasks:
 - After completing the task, create a pull request to the `fc-ss23-git` repository's `main` branch
 
 Student 1 & 2: divide the check conditions into two parts
+
+
+## The End
